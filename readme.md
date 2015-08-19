@@ -21,6 +21,7 @@ application/json
 
 Element Path                      | Required? | Type          | Description                                                     | Example
 ----------------------------------|-----------|---------------|-----------------------------------------------------------------|---------------------------------
+hostname                          | Yes       | String        | The server's hostname                                           | "server1.example.com"
 generated_at                      | Yes       | DateTime      | The time at which this report was generated                     | "2014-03-12T20:16:55.447Z"
 duration_millis                   | Yes       | String        | The number of milliseconds it took to generate the report       | "15.8"
 tests                             | Yes       | Object        | Object containing one or more test results keyed by component   |
@@ -41,6 +42,7 @@ tests.{component}.error           | No        | String        | An optional desc
 < Content-Length: 441
 <
 {
+  "hostname": "server1.example.com",
   "generated_at": "2015-06-25T14:33:33.383Z",
   "duration_millis": "15.8",
   "tests": {
@@ -58,6 +60,3 @@ tests.{component}.error           | No        | String        | An optional desc
   }
 }
 ```
-
-## Swagger spec
-See [swagger.yaml](swagger.yaml) for a full swagger implementation of the spec described above.
